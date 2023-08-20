@@ -1,0 +1,289 @@
+$bg-color: #c5c5c5;
+$primary-color:  #663399;
+$secondary-color: #993399;
+$terciary-color: #346c68;
+$quaternary-color: #999999;
+$primary-text-color: #281139;
+$secondary-text-color: #f8dfff;
+$button-text: #e2c5ff;
+$logo-color: #debdff;
+
+/* variables tipografias */
+$font-stack:'Fredoka', sans-serif;
+$title:4rem;
+$sub-title:3.2rem;
+$little-title:2.4rem;
+$body-text: 1.6rem;
+$regular:300;
+$medium:500;
+$bold: 700;
+
+@mixin flex-center ($direction,$content,$align ){
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $content;
+    align-items: $align;
+}
+
+@mixin button-style{
+    button{
+        background: none;
+        border-style: none;
+    }
+}
+
+
+
+body{
+    margin: 0px;
+    padding: 0px;
+    background-color: $bg-color;
+    font-family: $font-stack;
+}
+
+
+h1{
+    font-size: $title;
+    color:var($primary-text-color);
+    font-weight: $bold;
+}
+h2{
+    font-size:$sub-title;
+    color:var($primary-text-color);
+    font-weight: $medium;
+}
+h3{
+    font-size:$little-title;
+    color:var($primary-text-color);
+}
+
+p{
+    font-size: $body-text;
+    font-weight: $regular;
+}
+
+
+nav{
+@include flex-center(row,space-between,center);
+    background-color: $primary-color;
+    color:$logo-color;
+    width: auto;
+    padding: 16px;
+    top:0;
+    p{
+    font-size: 1.2rem;
+    font-weight: $medium;
+    padding-left: 16px;
+}
+.icons{
+    display: flex;
+    gap:8px;
+    @include button-style;
+}
+
+}
+
+
+article{
+@include flex-center(row, space-between,center);
+    width: auto;
+    color:$primary-text-color;
+    padding-left: 48px;
+    padding-right: 48px;
+    padding-top: 64px;
+    padding-bottom: 64px;
+.hero--section{
+@include flex-center(column,space-evenly,flex-start);
+    column-gap: 24px;
+    padding-top: 48px;
+}
+h1{
+    font-size: $title;
+    padding:0px;
+    margin:0px;
+}
+p{
+    font-size: $little-title;
+}
+@include button-style;
+button{
+    width:12vw;
+    padding:24px;
+    background-color: $primary-color;
+    border-radius: 32px;
+    color:$button-text;
+    font-size: 1rem;
+    font-weight: $bold;
+    transition: .3s;
+    &:hover{
+        transform: scale(1.1);
+    }
+}
+img{
+    width:25vw;
+    border-radius: 24px;
+}
+}
+
+section{
+    width: auto;
+    height: auto;
+    background-color: $primary-color;
+    padding: 56px;
+
+    h2{
+        color:$primary-text-color;
+        font-size: $sub-title;
+    }
+    .first--subsection{
+        padding-bottom: 64px;
+        h2{
+            font-weight: $regular;
+            padding-bottom: 56px;
+        }
+        .card--section{
+       @include flex-center(row,space-evenly,center);
+            flex-wrap: wrap;
+            width: auto;
+            height: auto;
+            column-gap: 240px;
+            row-gap: 80px;
+        }
+        .product--card{
+            width: 14vw;
+            height: 56vh;
+            background-color: $secondary-color;
+            color: $primary-text-color;
+            padding: 24px;
+            border-radius: 8px;
+            .icon{
+                width: 100%;
+                height: auto;
+                display: flex;
+                justify-content: flex-end;
+                padding-bottom: 16px;
+            
+                svg{
+                    width:24px;
+                    height: 24px;
+                    color: $primary-text-color;
+                }
+            }
+        .card--image{
+            @include flex-center(row, space-between,center);
+            justify-content: center;
+            width: auto;
+            height: auto;
+            img{
+                width: 12vw;
+                height: 30vh;
+                object-fit: cover;
+                border-radius: 8px;
+            }
+        }
+    }
+
+  }
+  .second--subsection{
+    @extend .first--subsection;
+    .product--card{
+        background-color: $terciary-color;
+        color: $secondary-text-color;
+        .icon{
+            svg{
+                color: $secondary-text-color;
+            }
+    }
+
+    }
+  }
+}
+
+
+
+.about-us{
+padding-bottom: 64px;
+    h2{
+        font-weight: $bold;
+        padding-bottom: 64px;
+    }
+    .mission--section{
+        @include flex-center(row, space-evenly,center);
+        .one{
+            width: 32vh;
+            display: flex;
+            gap:40px;
+            color: $secondary-text-color;
+            img{
+                object-fit: contain;
+            }
+            p{
+                text-align: center;
+                font-size: $body-text;
+            }
+        }
+        .two{
+            @extend .one;
+
+        }
+    }
+}
+
+.gallery{
+    h2{
+        font-weight: $bold;
+        padding-bottom: 64px;
+    }   
+    .gallery--images{
+        @include flex-center(row,space-between ,center);
+        img{
+        width: 28vw;
+        height: 40vh;
+        object-position: 5px 35%;
+        object-fit: cover;
+        border-radius: 16px;
+        transition: .4s;
+        &:hover{
+            transform: scale(1.1);
+        }
+    }
+    }
+}
+
+.location{
+    color:$secondary-text-color;
+    h2{
+        font-size: $sub-title;
+        padding-bottom: 64px;
+        padding-top: 64px;
+    }
+    .map{
+        @include flex-center(row, center,center);
+        padding-bottom: 48px;
+    }
+    h3{
+        font-size: $little-title;
+    }
+    p{
+        font-size: $body-text;
+    }
+}
+
+
+footer{
+    width: 100%;
+    height: auto;
+    background-color: $primary-color;
+    color:$secondary-text-color;
+    padding-bottom:40px;
+    p , h3{
+        padding-left: 48px;
+    }
+.social-media{
+@include flex-center(row, center, center);
+        gap:40px;
+        padding-bottom: 40px;
+    }
+}
+
+

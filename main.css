@@ -1,0 +1,270 @@
+/* variables tipografias */
+body {
+  margin: 0px;
+  padding: 0px;
+  background-color: #c5c5c5;
+  font-family: "Fredoka", sans-serif;
+}
+
+h1 {
+  font-size: 4rem;
+  color: var(#281139);
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 3.2rem;
+  color: var(#281139);
+  font-weight: 500;
+}
+
+h3 {
+  font-size: 2.4rem;
+  color: var(#281139);
+}
+
+p {
+  font-size: 1.6rem;
+  font-weight: 300;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #663399;
+  color: #debdff;
+  width: auto;
+  padding: 16px;
+  top: 0;
+}
+nav p {
+  font-size: 1.2rem;
+  font-weight: 500;
+  padding-left: 16px;
+}
+nav .icons {
+  display: flex;
+  gap: 8px;
+}
+nav .icons button {
+  background: none;
+  border-style: none;
+}
+
+article {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: auto;
+  color: #281139;
+  padding-left: 48px;
+  padding-right: 48px;
+  padding-top: 64px;
+  padding-bottom: 64px;
+}
+article .hero--section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  -moz-column-gap: 24px;
+       column-gap: 24px;
+  padding-top: 48px;
+}
+article h1 {
+  font-size: 4rem;
+  padding: 0px;
+  margin: 0px;
+}
+article p {
+  font-size: 2.4rem;
+}
+article button {
+  background: none;
+  border-style: none;
+}
+article button {
+  width: 12vw;
+  padding: 24px;
+  background-color: #663399;
+  border-radius: 32px;
+  color: #e2c5ff;
+  font-size: 1rem;
+  font-weight: 700;
+  transition: 0.3s;
+}
+article button:hover {
+  transform: scale(1.1);
+}
+article img {
+  width: 25vw;
+  border-radius: 24px;
+}
+
+section {
+  width: auto;
+  height: auto;
+  background-color: #663399;
+  padding: 56px;
+}
+section h2 {
+  color: #281139;
+  font-size: 3.2rem;
+}
+section .first--subsection, section .second--subsection {
+  padding-bottom: 64px;
+}
+section .first--subsection h2, section .second--subsection h2 {
+  font-weight: 300;
+  padding-bottom: 56px;
+}
+section .first--subsection .card--section, section .second--subsection .card--section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  width: auto;
+  height: auto;
+  -moz-column-gap: 240px;
+       column-gap: 240px;
+  row-gap: 80px;
+}
+section .first--subsection .product--card, section .second--subsection .product--card {
+  width: 14vw;
+  height: 56vh;
+  background-color: #993399;
+  color: #281139;
+  padding: 24px;
+  border-radius: 8px;
+}
+section .first--subsection .product--card .icon, section .second--subsection .product--card .icon {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: flex-end;
+  padding-bottom: 16px;
+}
+section .first--subsection .product--card .icon svg, section .second--subsection .product--card .icon svg {
+  width: 24px;
+  height: 24px;
+  color: #281139;
+}
+section .first--subsection .product--card .card--image, section .second--subsection .product--card .card--image {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  height: auto;
+}
+section .first--subsection .product--card .card--image img, section .second--subsection .product--card .card--image img {
+  width: 12vw;
+  height: 30vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 8px;
+}
+section .second--subsection .product--card {
+  background-color: #346c68;
+  color: #f8dfff;
+}
+section .second--subsection .product--card .icon svg {
+  color: #f8dfff;
+}
+
+.about-us {
+  padding-bottom: 64px;
+}
+.about-us h2 {
+  font-weight: 700;
+  padding-bottom: 64px;
+}
+.about-us .mission--section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.about-us .mission--section .one, .about-us .mission--section .two {
+  width: 32vh;
+  display: flex;
+  gap: 40px;
+  color: #f8dfff;
+}
+.about-us .mission--section .one img, .about-us .mission--section .two img {
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.about-us .mission--section .one p, .about-us .mission--section .two p {
+  text-align: center;
+  font-size: 1.6rem;
+}
+.gallery h2 {
+  font-weight: 700;
+  padding-bottom: 64px;
+}
+.gallery .gallery--images {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.gallery .gallery--images img {
+  width: 28vw;
+  height: 40vh;
+  -o-object-position: 5px 35%;
+     object-position: 5px 35%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 16px;
+  transition: 0.4s;
+}
+.gallery .gallery--images img:hover {
+  transform: scale(1.1);
+}
+
+.location {
+  color: #f8dfff;
+}
+.location h2 {
+  font-size: 3.2rem;
+  padding-bottom: 64px;
+  padding-top: 64px;
+}
+.location .map {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 48px;
+}
+.location h3 {
+  font-size: 2.4rem;
+}
+.location p {
+  font-size: 1.6rem;
+}
+
+footer {
+  width: 100%;
+  height: auto;
+  background-color: #663399;
+  color: #f8dfff;
+  padding-bottom: 40px;
+}
+footer p, footer h3 {
+  padding-left: 48px;
+}
+footer .social-media {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  padding-bottom: 40px;
+}/*# sourceMappingURL=main.css.map */
